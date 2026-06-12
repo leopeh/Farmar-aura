@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Convite Especial ❤️</title>
+
+<style>
+body {
+    background: #ffe6f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1, h2 {
+    color: #ff0066;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#sim {
+    background: #4CAF50;
+    color: white;
+}
+
+#nao {
+    background: red;
+    color: white;
+    position: absolute;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="tela">
+    <h1>Você aceita sair comigo? ❤️</h1>
+
+    <button id="sim" onclick="dataEncontro()">
+        Sim 😍
+    </button>
+
+    <button id="nao">
+        Não 😢
+    </button>
+</div>
+
+
+<script>
+
+// Faz o botão "Não" fugir
+let nao = document.getElementById("nao");
+
+nao.addEventListener("mouseover", function() {
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+
+    nao.style.left = x + "px";
+    nao.style.top = y + "px";
+});
